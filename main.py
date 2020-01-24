@@ -45,6 +45,16 @@ async def convert_command(ctx: discord.ext.commands.context.Context, to_convert:
         string = "%s Robert = %s W"
         await ctx.send(content=string % (to_convert, result))
 
+    if unit_from.lower() == "kg" and unit_to.lower() == "robert":
+        result: float = to_convert / 120
+        string = "%s kg = %s Robert"
+        await ctx.send(content=string % (to_convert, result))
+
+    if unit_to.lower() == "kg" and unit_from.lower() == "robert":
+        result: float = to_convert * 120
+        string = "%s Robert = %s kg"
+        await ctx.send(content=string % (to_convert, result))
+
 
 @bot.command(name="fbi", help="")
 async def fbi_command(ctx: discord.ext.commands.context.Context):
