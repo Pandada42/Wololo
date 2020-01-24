@@ -35,6 +35,16 @@ async def convert_command(ctx: discord.ext.commands.context.Context, to_convert:
         string = "%s Idil(s) = %s mètre(s)"
         await ctx.send(content=string % (to_convert, result))
 
+    if unit_from.lower() == "w" and unit_to.lower() == "robert":
+        result: float = to_convert / 700
+        string = "%s W = %s Robert"
+        await ctx.send(content=string % (to_convert, result))
+
+    if unit_to.lower() == "w" and unit_from.lower() == "robert":
+        result: float = to_convert * 700
+        string = "%s Robert = %s W"
+        await ctx.send(content=string % (to_convert, result))
+
 
 @bot.command(name="fbi", help="")
 async def fbi_command(ctx: discord.ext.commands.context.Context):
