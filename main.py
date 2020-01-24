@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from discord.ext import commands
 
 TOKEN = os.getenv('DISCORD_TOKEN')
+print(TOKEN)
 
 bot = commands.Bot(command_prefix="jud ")
 
