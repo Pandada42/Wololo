@@ -96,12 +96,12 @@ async def convert_command(ctx: discord.ext.commands.context.Context, to_convert:
         await ctx.send(content=string % (to_convert, result))
 
     if unit_from.lower() == "km/h" and unit_to.lower() == "fastaf":
-        result: float = to_convert / 67
+        result: float = to_convert / 69
         string = "%s km/h = %s Fast AF"
         await ctx.send(content=string % (to_convert, result))
 
     if unit_to.lower() == "km/h" and unit_from.lower() == "fastaf":
-        result: float = to_convert * 67
+        result: float = to_convert * 69
         string = "%s Fast AF = %s km/h"
         await ctx.send(content=string % (to_convert, result))
 
