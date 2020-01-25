@@ -144,4 +144,9 @@ async def fbi_command(ctx: discord.ext.commands.context.Context):
 async def inculte_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="***__INCUUULTEE !!__***")
 
+@bot.command(name="censure", help="censure")
+async def censure_command(ctx: discord.ext.commands.context.Context):
+    await ctx.delete(*, delay=None)
+    await ctx.send(content=":censure:")
+    
 bot.run(TOKEN)
