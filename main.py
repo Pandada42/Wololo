@@ -23,7 +23,7 @@ async def on_ready():
         break
 
 
-@bot.command(name="convert", help="")
+@bot.command(name="convert", help="jud convert *value* *base unit* *wanted unit* --> *converted value* *wanted unit*")
 async def convert_command(ctx: discord.ext.commands.context.Context, to_convert: float, unit_from: str, unit_to: str):
     if meter.__contains__(unit_from.lower()) and unit_to.lower() == "idil":
         result: float = to_convert / 1.6
@@ -136,16 +136,12 @@ async def convert_command(ctx: discord.ext.commands.context.Context, to_convert:
         await ctx.send(content=string % (to_convert, result))
 
 
-@bot.command(name="fbi", help="")
+@bot.command(name="fbi", help="Dites bonjour au FBI ! ")
 async def fbi_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="***___FBI OPEN UP!!___***")
 
-@bot.command(name="inculte", help="")
+@bot.command(name="inculte", help="Arrête de jouer et va lire !")
 async def inculte_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="***__INCUUULTEE !!__***")
-
-@bot.command(name="aled", help="")
-async def help_command(ctx : discord.ext.commands.context.Context):
-    await ctx.send(content="'''Voici les commandes : jud fbi --> ***___FBI OPEN UP!!___*** - jud convert *valeur* *unité de départ* *unité de fin* --> **conversion** *unité de fin* - jud inculte --> ***__INCUUULTEE !!__*** '''"
 
 bot.run(TOKEN)
