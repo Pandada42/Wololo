@@ -6,7 +6,7 @@ from discord.ext import commands
 TOKEN = os.getenv('DISCORD_TOKEN')
 print(TOKEN)
 
-bot = commands.Bot(command_prefix="jud ") 
+bot = commands.Bot(command_prefix="jud ")
 
 print("Lecture en Cours de la Bible Judigniste")
 
@@ -142,7 +142,7 @@ async def fbi_command(ctx: discord.ext.commands.context.Context):
 
 @bot.command(name="inculte", help="")
 async def inculte_command(ctx: discord.ext.commands.context.Context):
-    await ctx.send(content="***___ INCUUULTEE !!__***")
+    await ctx.send(content="***__INCUUULTEE !!__***")
 
 
 bot.run(TOKEN)
