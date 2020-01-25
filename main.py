@@ -140,13 +140,16 @@ async def convert_command(ctx: discord.ext.commands.context.Context, to_convert:
 async def fbi_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="***___FBI OPEN UP!!___***")
 
+
 @bot.command(name="inculte", help="Arrête de jouer et va lire !")
 async def inculte_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="***__INCUUULTEE !!__***")
 
+
 @bot.command(name="censure", help="censure")
 async def censure_command(ctx: discord.ext.commands.context.Context):
-    await ctx.delete(*, delay=None)
+    await ctx.message.delete(delay=None)
     await ctx.send(content=":censure:")
-    
+
+
 bot.run(TOKEN)
