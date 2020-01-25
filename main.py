@@ -6,7 +6,7 @@ from discord.ext import commands
 TOKEN = os.getenv('DISCORD_TOKEN')
 print(TOKEN)
 
-bot = commands.Bot(command_prefix="jud ") or commands.Bot(command_prefix="Jud ")
+bot = commands.Bot(command_prefix="jud ") 
 
 print("Lecture en Cours de la Bible Judigniste")
 
