@@ -144,5 +144,9 @@ async def fbi_command(ctx: discord.ext.commands.context.Context):
 async def inculte_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="***__INCUUULTEE !!__***")
 
+@bot.command(name="help", help="")
+async def help_command(ctx : discord.ext.commands.context.Context):
+    await ctx.send(content="'''Markdown Voici les commandes : jud fbi --> ***___FBI OPEN UP!!___*** - jud convert *valeur* *unité de départ* *unité de fin* --> **conversion** *unité de fin* - jud inculte --> ***__INCUUULTEE !!__*** "
 
 bot.run(TOKEN)
+    
