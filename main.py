@@ -153,7 +153,10 @@ async def censure_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content=":censure:")
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 bot.run(TOKEN)
