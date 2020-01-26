@@ -157,9 +157,10 @@ async def censure_command(ctx: discord.ext.commands.context.Context):
 
 @bot.command(name="commandes", help="")
 async def commandes_command(ctx: discord.ext.commands.context.Context):
-    await ctx.send(content="liste des commandes")
+    message: str = "liste des commandes"
     for command in A:
-        await ctx.send(content="jud " + command.name + "; usage: " + command.help)
+        message = message + "\n" + "jud " + command.name + "; usage: " + command.help
+    await ctx.send(content=message)
 
 
 A.append(bot.get_command("convert"))
