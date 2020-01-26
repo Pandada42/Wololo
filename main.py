@@ -12,10 +12,8 @@ print("Lecture en Cours de la Bible Judigniste")
 
 meter = ["m", "mètre", "meter"]
 
-A=[]
-A.append(convert)
-A.append(fbi)
-A.append(inculte)
+A = []
+
 
 @bot.event
 async def on_ready():
@@ -156,11 +154,18 @@ async def censure_command(ctx: discord.ext.commands.context.Context):
     await ctx.message.delete(delay=None)
     await ctx.send(content=":censure:")
 
+
 @bot.command(name="commandes", help="")
 async def commandes_command(ctx: discord.ext.commands.context.Context):
     await ctx.send(content="liste des commandes")
-    for commands in A:
-        await ctx.send(content="jud help" + command_name)
+    for command in A:
+        await ctx.send(content="jud " + command.name + "; usage: " + command.help)
 
+
+A.append(bot.get_command("convert"))
+A.append(bot.get_command("fbi"))
+A.append(bot.get_command("inculte"))
+A.append(bot.get_command("censure"))
+A.append(bot.get_command("commandes"))
 
 bot.run(TOKEN)
