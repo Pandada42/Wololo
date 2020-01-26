@@ -149,6 +149,7 @@ async def inculte_command(ctx: discord.ext.commands.context.Context):
 @bot.command(name="censure", help="censure")
 async def censure_command(ctx: discord.ext.commands.context.Context):
     await ctx.message.delete(delay=None)
+    await ctx.message.delete(delay=None)
     await ctx.send(content=":censure:")
 
 <<<<<<< Updated upstream
