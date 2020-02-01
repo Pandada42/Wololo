@@ -173,18 +173,12 @@ async def renaud_command(ctx : discord.ext.commands.context.Context):
     await ctx.message.delete(delay=10)
 
 
-@bot.command(name="commandes", help="")
-async def commandes_command(ctx: discord.ext.commands.context.Context):
-    message: str = "liste des commandes"
-    for command in A:
-        message = message + "\n" + "jud " + command.name + "; aide : " + command.help
-    await ctx.send(content=message)
-
-
 A.append(bot.get_command("convert"))
 A.append(bot.get_command("fbi"))
 A.append(bot.get_command("inculte"))
 A.append(bot.get_command("censure"))
-A.append(bot.get_command("commandes"))
+A.append(bot.get_command("renecoty"))
+A.append(bot.get_command("bambino"))
+A.append(bot.get_command("renaud"))
 
 bot.run(TOKEN)
