@@ -154,31 +154,24 @@ async def censure_command(ctx: discord.ext.commands.context.Context):
     await ctx.message.delete(delay=None)
     await ctx.send(content=":censure:")
 
-@bot.command(name="renecoty", help="Gnuhuhu")
+@bot.command(name="maison", help="back home")
 async def renecoty_command(ctx: discord.ext.commands.context.Context):
     await ctx.message.delete(delay=None)
-    await ctx.send(content="3-15-13-13-5-14-20 5-19-20 22-15-20-18-5 2-12-1-14-17-21-5-20-20-5 ? 3-8-1-14-20-5-26 13-15-9 21-14-5 3-8-1-14-19-15-14 4-21 3-1-9-18-5 !")
+    await ctx.send(content="*Je rentre à ma maison*")
     await ctx.message.delete(delay=10)
 
-@bot.command(name="bambino", help="Et les cocos boers qui nous coupaient les lèvres...")
+@bot.command(name="france", help="JEANNE, AU SECOURS")
 async def bambino_command(ctx : discord.ext.commands.context.Context):
     await ctx.message.delete(delay=None)
-    await ctx.send(content="5 Minuten mit Ihnen auf einer Bank sitzen.")
+    await ctx.send(content="***__LA FRANCE AUX FRANCAIS !__***")
     await ctx.message.delete(delay=10)
-
-@bot.command(name="renaud", help="L'escroquerie et un hobby partagé du PDG et de la cible")
-async def renaud_command(ctx : discord.ext.commands.context.Context):
-    await ctx.message.delete(delay=None)
-    await ctx.send(content="Voici venir le plus gros malandrin ! Il nous vient direct des Républicains ! Un olibrius, un vrai malotru, vous l'avez ptet reconnu ? Psssst, en mp la réponse")
-    await ctx.message.delete(delay=10)
-
 
 A.append(bot.get_command("convert"))
 A.append(bot.get_command("fbi"))
 A.append(bot.get_command("inculte"))
 A.append(bot.get_command("censure"))
-A.append(bot.get_command("renecoty"))
-A.append(bot.get_command("bambino"))
-A.append(bot.get_command("renaud"))
+A.append(bot.get_command("maison"))
+A.append(bot.get_command("france"))
+
 
 bot.run(TOKEN)
